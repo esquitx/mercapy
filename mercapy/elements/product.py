@@ -28,7 +28,8 @@ class Product(MercadonaItem):
         language: Literal["es", "en"] = "es",
     ):
         if isinstance(id, dict):
-            endpoint = f"/api/products/{id.get("id")}/"
+            point = id.get("id")
+            endpoint = f"/api/products/{point}/"
         else:
             endpoint = f"/api/products/{id}/"
 
